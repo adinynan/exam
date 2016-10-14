@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>隐藏显示</title>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css"/>
+   <style media="screen">
+     div{
+       width: 100px;
+       height: 100px;
+       background: blue;
+       border: 1px solid #000;
+       display: block;
+     }
+
+   </style>
+  <script type="text/javascript">
+  $(function(){
+
+     if($("div").css("display")=="block"){
+     $("button").click(function(){
+        $("div").hide("shake",{direction: "right"},2000,function(){
+        })
+      })
+      }
+      if($("div").css("display")!="block"){
+         $("button").click(function(){
+           $("div").show("shake",{direction: "right"},2000,function(){
+           });
+        })
+      }
+   });
+  </script>
+</head>
+<body>
+  <button >隐藏/显示</button>
+  <hr>
+  <div></div>
+</body>
+</html>

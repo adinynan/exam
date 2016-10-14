@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Mobile</title>
+  <style media="screen">
+  #div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+  }
+  </style>
+  <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" media="screen" title="no title">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    $("#btn").click(function(){
+      $("#div").css({backgroundColor: "red"});
+    });
+  });
+  </script>
+</head>
+<body>
+
+  <div data-role='page'>
+    <div data-role="header" data-position="fixed"><h1>标题</h1></div>
+    <div data-role="content">
+      <button id="btn" data-theme="b">按钮</button>
+      <div id="div"></div>
+    </div>
+    <div data-role="footer" data-position="fixed"><h4>底部</h4></div>
+  </div>
+
+</body>
+</html>
